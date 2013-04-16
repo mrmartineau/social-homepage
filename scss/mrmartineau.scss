@@ -1,0 +1,138 @@
+@import "mixins";
+@import "type";
+
+$silver: #687581;
+
+@-webkit-keyframes zFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-o-keyframes zFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes zFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes zFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+body {
+	text-align: center;
+	font: 16px/1.5 "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif;
+	color: $silver;
+	margin: 0;
+	@include prefixer(animation, zFadeIn 1s ease-in-out, webkit ms o moz spec);
+}
+
+body, a, span {
+	text-decoration: none;
+	@include prefixer(transition, all 0.2s ease-in-out, webkit ms o moz spec);
+}
+
+::selection {
+	color:#fff;
+	background-color: $silver;
+}
+
+::-moz-selection {
+	color:#fff;
+	background-color: $silver;
+}
+
+h1 {
+	text-transform: uppercase;
+	background: #fff url(../img/avatar-short.jpg) no-repeat;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	height: 250px;
+	line-height: 250px;
+	@include prefixer(background-size, cover, webkit ms o moz spec);
+}
+
+.personal-links {
+	padding: 0 20px 20px;
+	@include prefixer(perspective, 700px, webkit o moz ms spec);
+
+	a {
+		position: relative;
+		display: inline-block;
+		padding: 0 20px;
+		@extend %asset-font;
+		font-size: 120px;
+		top: 0;
+
+
+		&:hover {
+			@include prefixer(transform, rotateX(-30deg), webkit o moz ms spec);
+
+			span {
+				opacity: 1;
+				font-size:16px;
+				top: 20px;
+			}
+		}
+	}
+
+	i {
+		font-style: normal;
+	}
+
+	span {
+		position: absolute;
+		top: 20px;
+		display: block;
+		font-size:16px;
+		// text-transform: uppercase;
+		opacity: 0;
+		width: 150px;
+		left: 50%;
+		margin-left: -77px;
+		text-align: center;
+		font-weight: bold;
+		font-family: "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif;
+	}
+
+}
+
+
+.personal-links--email {
+	color: green;
+}
+.personal-links--twitter {
+	color: #258cba;
+}
+.personal-links--appnet {
+	color: #717171;
+}
+.personal-links--instagram {
+	color: #33628A;
+}
+.personal-links--dribbble {
+	color: #c12d6d;
+}
+.personal-links--github {
+	color: #000;
+}
+.personal-links--tumblr {
+	color: #2f4662;
+}
+.personal-links--pinboard {
+	color: #93241f;
+}
+.personal-links--lastfm {
+	color: #ca392f;
+}
+.personal-links--codepen {
+	color: #555;
+}
+.personal-links--portfolio {
+	color: #009242;
+}
+.personal-links--blog {
+	color: #0d204a;
+}
