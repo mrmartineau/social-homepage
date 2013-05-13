@@ -3,6 +3,7 @@
 
 $silver: #687581;
 
+// Fade In animation
 @-webkit-keyframes zFadeIn {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
@@ -20,12 +21,27 @@ $silver: #687581;
 	100% { opacity: 1; }
 }
 
+// Wiggle animation
+@-webkit-keyframes wiggle {
+	25% {-webkit-transform:rotate(-7deg);}
+	75% {-webkit-transform:rotate(7deg);}
+}
+
+@-moz-keyframes wiggle {
+	25% {-moz-transform:rotate(-7deg);}
+	75% {-moz-transform:rotate(7deg);}
+}
+
+@keyframes wiggle {
+	25% {transform:rotate(-7deg);}
+	75% {transform:rotate(7deg);}
+}
+
 body {
 	text-align: center;
 	font: 16px/1.5 "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif;
 	color: $silver;
 	margin: 0;
-	@include prefixer(animation, zFadeIn 1s ease-in-out, webkit ms o moz spec);
 }
 
 body, a, span {
@@ -54,22 +70,8 @@ h1 {
 	@include prefixer(background-size, cover, webkit ms o moz spec);
 }
 
-// @-webkit-keyframes zRotateX {
-// 	50% { @include prefixer(transform, rotateX(10deg), webkit o moz ms spec); }
-// }
-// @-o-keyframes zRotateX {
-// 	50% { @include prefixer(transform, rotateX(10deg), webkit o moz ms spec); }
-// }
-// @-moz-keyframes zRotateX {
-// 	50% { @include prefixer(transform, rotateX(10deg), webkit o moz ms spec); }
-// }
-// @keyframes zRotateX {
-// 	50% { @include prefixer(transform, rotateX(10deg), webkit o moz ms spec); }
-// }
-
 .personal-links {
 	padding: 0 20px 20px;
-	@include prefixer(perspective, 700px, webkit o moz ms spec);
 
 	a {
 		position: relative;
@@ -78,11 +80,9 @@ h1 {
 		@extend %asset-font;
 		font-size: 120px;
 		top: 0;
-		// @include prefixer(transform, rotateX(-10deg), webkit o moz ms spec);
-		// @include prefixer(animation, zRotateX 5s ease-in-out infinite, webkit ms o moz spec);
 
 		&:hover {
-			@include prefixer(transform, rotateX(-20deg), webkit o moz ms spec);
+			@include prefixer(animation, wiggle 0.2s 1 linear, webkit o moz ms spec);
 
 			span {
 				opacity: 1;
@@ -101,7 +101,6 @@ h1 {
 		top: 20px;
 		display: block;
 		font-size:16px;
-		// text-transform: uppercase;
 		opacity: 0;
 		width: 150px;
 		left: 50%;
@@ -112,7 +111,6 @@ h1 {
 	}
 
 }
-
 
 .personal-links--email {
 	color: green;

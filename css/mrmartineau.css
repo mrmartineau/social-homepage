@@ -3,10 +3,8 @@
   src: url("font/entyposocial-regular.eot");
   src: url("font/entyposocial-regular.eot?#iefix") format("embedded-opentype"), url("font/entyposocial-regular.woff") format("woff"), url("font/entyposocial-regular.ttf") format("truetype"), url("font/entyposocial-regular.svg#entypo__socialregular") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
-/* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/_type.scss */
 .asset-font, [data-icon]:before, .personal-links a {
   font-family: 'entypo__social';
   speak: none;
@@ -15,99 +13,83 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
-/* line 30, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/_type.scss */
 [data-icon]:before {
   content: attr(data-icon);
-  margin-right: 4px;
-}
+  margin-right: 4px; }
 
 @-webkit-keyframes zFadeIn {
-  /* line 7, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   0% {
-    opacity: 0;
-  }
+    opacity: 0; }
 
-  /* line 8, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   100% {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @-o-keyframes zFadeIn {
-  /* line 11, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   0% {
-    opacity: 0;
-  }
+    opacity: 0; }
 
-  /* line 12, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   100% {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @-moz-keyframes zFadeIn {
-  /* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   0% {
-    opacity: 0;
-  }
+    opacity: 0; }
 
-  /* line 16, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   100% {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @keyframes zFadeIn {
-  /* line 19, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   0% {
-    opacity: 0;
-  }
+    opacity: 0; }
 
-  /* line 20, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
   100% {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
-/* line 23, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
+@-webkit-keyframes wiggle {
+  25% {
+    -webkit-transform: rotate(-7deg); }
+
+  75% {
+    -webkit-transform: rotate(7deg); } }
+
+@-moz-keyframes wiggle {
+  25% {
+    -moz-transform: rotate(-7deg); }
+
+  75% {
+    -moz-transform: rotate(7deg); } }
+
+@keyframes wiggle {
+  25% {
+    transform: rotate(-7deg); }
+
+  75% {
+    transform: rotate(7deg); } }
+
 body {
   text-align: center;
   font: 16px/1.5 "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif;
   color: #687581;
-  margin: 0;
-  -webkit-animation: zFadeIn 1s ease-in-out;
-  -ms-animation: zFadeIn 1s ease-in-out;
-  -o-animation: zFadeIn 1s ease-in-out;
-  -moz-animation: zFadeIn 1s ease-in-out;
-  animation: zFadeIn 1s ease-in-out;
-}
+  margin: 0; }
 
-/* line 31, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 body, a, span {
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
+  transition: all 0.2s ease-in-out; }
 
-/* line 36, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 ::selection {
   color: #fff;
-  background-color: #687581;
-}
+  background-color: #687581; }
 
-/* line 41, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 ::-moz-selection {
   color: #fff;
-  background-color: #687581;
-}
+  background-color: #687581; }
 
-/* line 46, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 h1 {
   text-transform: uppercase;
   background: white url(../img/avatar-short.jpg) no-repeat;
@@ -120,115 +102,73 @@ h1 {
   -ms-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
-}
+  background-size: cover; }
 
-/* line 70, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links {
-  padding: 0 20px 20px;
-  -webkit-perspective: 700px;
-  -o-perspective: 700px;
-  -moz-perspective: 700px;
-  -ms-perspective: 700px;
-  perspective: 700px;
-}
-/* line 74, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
-.personal-links a {
-  position: relative;
-  display: inline-block;
-  padding: 0 20px;
-  font-size: 120px;
-  top: 0;
-}
-/* line 84, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
-.personal-links a:hover {
-  -webkit-transform: rotateX(-20deg);
-  -o-transform: rotateX(-20deg);
-  -moz-transform: rotateX(-20deg);
-  -ms-transform: rotateX(-20deg);
-  transform: rotateX(-20deg);
-}
-/* line 87, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
-.personal-links a:hover span {
-  opacity: 1;
-  font-size: 16px;
-  top: 20px;
-}
-/* line 95, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
-.personal-links i {
-  font-style: normal;
-}
-/* line 99, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
-.personal-links span {
-  position: absolute;
-  top: 20px;
-  display: block;
-  font-size: 16px;
-  opacity: 0;
-  width: 150px;
-  left: 50%;
-  margin-left: -77px;
-  text-align: center;
-  font-weight: bold;
-  font-family: "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif;
-}
+  padding: 0 20px 20px; }
+  .personal-links a {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 120px;
+    top: 0; }
+    .personal-links a:hover {
+      -webkit-animation: wiggle 0.2s 1 linear;
+      -o-animation: wiggle 0.2s 1 linear;
+      -moz-animation: wiggle 0.2s 1 linear;
+      -ms-animation: wiggle 0.2s 1 linear;
+      animation: wiggle 0.2s 1 linear; }
+      .personal-links a:hover span {
+        opacity: 1;
+        font-size: 16px;
+        top: 20px; }
+  .personal-links i {
+    font-style: normal; }
+  .personal-links span {
+    position: absolute;
+    top: 20px;
+    display: block;
+    font-size: 16px;
+    opacity: 0;
+    width: 150px;
+    left: 50%;
+    margin-left: -77px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif; }
 
-/* line 117, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--email {
-  color: green;
-}
+  color: green; }
 
-/* line 120, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--twitter {
-  color: #258cba;
-}
+  color: #258cba; }
 
-/* line 123, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--appnet {
-  color: #717171;
-}
+  color: #717171; }
 
-/* line 126, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--instagram {
-  color: #33628A;
-}
+  color: #33628A; }
 
-/* line 129, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--dribbble {
-  color: #c12d6d;
-}
+  color: #c12d6d; }
 
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--github {
-  color: #000;
-}
+  color: #000; }
 
-/* line 135, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--tumblr {
-  color: #2f4662;
-}
+  color: #2f4662; }
 
-/* line 138, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--pinboard {
-  color: #93241f;
-}
+  color: #93241f; }
 
-/* line 141, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--lastfm {
-  color: #ca392f;
-}
+  color: #ca392f; }
 
-/* line 144, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--codepen {
-  color: #555;
-}
+  color: #555; }
 
-/* line 147, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--portfolio {
-  color: #009242;
-}
+  color: #009242; }
 
-/* line 150, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/social-homepage/scss/mrmartineau.scss */
 .personal-links--blog {
-  color: #0d204a;
-}
+  color: #0d204a; }
