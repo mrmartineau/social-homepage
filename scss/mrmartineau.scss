@@ -2,6 +2,7 @@
 @import "type";
 
 $silver: #687581;
+$wide-breakpoint: 595px;
 
 // Fade In animation
 @-webkit-keyframes zFadeIn {
@@ -37,6 +38,9 @@ $silver: #687581;
 	75% {transform:rotate(7deg);}
 }
 
+html {
+	overflow-y: scroll;
+}
 body {
 	text-align: center;
 	font: 16px/1.5 "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif;
@@ -62,13 +66,34 @@ body, a, span {
 h1 {
 	text-transform: uppercase;
 	background: #fff url(../img/avatar-short.jpg) no-repeat;
-	padding: 0;
+	padding: 15% 0;
 	margin: 0;
 	color: darken($silver, 25%);
-	height: 250px;
-	line-height: 250px;
+	line-height: 1.3;
 	@include prefixer(background-size, cover, webkit ms o moz spec);
+
+	br {
+		display: block;
+	}
 }
+
+
+// ======================
+// === Personal links ===
+// ======================
+// Services provided:
+// * Email
+// * Twitter
+// * App.net
+// * Instagram
+// * Dribbble
+// * Github
+// * Tumblr
+// * Pinboard
+// * Last.fm
+// * Codepen
+// * Personal portfolio
+// * Personal blog
 
 .personal-links {
 	padding: 0 20px 20px;
@@ -78,7 +103,7 @@ h1 {
 		display: inline-block;
 		padding: 0 20px;
 		@extend %asset-font;
-		font-size: 120px;
+		font-size: 80px;
 		top: 0;
 
 		&:hover {
@@ -86,8 +111,8 @@ h1 {
 
 			span {
 				opacity: 1;
-				font-size:16px;
-				top: 20px;
+				font-size:13px;
+				top: 10px;
 			}
 		}
 	}
@@ -98,9 +123,9 @@ h1 {
 
 	span {
 		position: absolute;
-		top: 20px;
+		top: 10px;
 		display: block;
-		font-size:16px;
+		font-size:13px;
 		opacity: 0;
 		width: 150px;
 		left: 50%;
@@ -109,42 +134,162 @@ h1 {
 		font-weight: bold;
 		font-family: "colfax-web-1", "colfax-web-2", Helvetica, Arial, sans-serif;
 	}
-
 }
 
 .personal-links--email {
 	color: green;
+
+	&:before {
+
+	}
 }
 .personal-links--twitter {
 	color: #258cba;
+
+	&:before {
+
+	}
 }
 .personal-links--appnet {
 	color: #717171;
+
+	&:before {
+
+	}
 }
 .personal-links--instagram {
 	color: #33628A;
+
+	&:before {
+
+	}
 }
 .personal-links--dribbble {
 	color: #c12d6d;
+
+	&:before {
+
+	}
 }
 .personal-links--github {
 	color: #000;
+
+	&:before {
+
+	}
 }
 .personal-links--tumblr {
 	color: #2f4662;
+
+	&:before {
+
+	}
 }
 .personal-links--pinboard {
 	color: #93241f;
+
+	&:before {
+
+	}
 }
 .personal-links--lastfm {
 	color: #ca392f;
+
+	&:before {
+
+	}
 }
 .personal-links--codepen {
 	color: #555;
+
+	&:before {
+
+	}
 }
 .personal-links--portfolio {
 	color: #009242;
+
+	&:before {
+
+	}
 }
 .personal-links--blog {
 	color: #0d204a;
+
+	&:before {
+
+	}
 }
+
+
+// ==============
+// === Footer ===
+// ==============
+
+
+.footer {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 16px;
+
+	p {
+		margin: 0 auto 3px;
+		font-size: 12px;
+		max-width: 460px;
+	}
+
+	a {
+		&, &:link, &:visited {
+			color: darken($silver, 20%);
+			font-weight: bold;
+		}
+
+		&, &:hover, &:active {
+			color: #000;
+		}
+	}
+}
+
+
+
+// === Wide screen breakpoint ===
+@media screen and (min-width: $wide-breakpoint) {
+	h1 {
+		line-height: 250px;
+		height: 250px;
+		padding: 0;
+
+		br {
+			display: none;
+		}
+	}
+
+	.personal-links {
+		padding: 0 20px 20px;
+
+		a {
+			padding: 0 20px;
+			font-size: 120px;
+			top: 0;
+
+			&:hover {
+				span {
+					font-size:16px;
+					top: 20px;
+				}
+			}
+		}
+
+		span {
+			font-size: 16px;
+			top: 20px;
+		}
+	}
+
+	.footer {
+		position: fixed;
+		bottom: 0; left: 0; right: 0;
+		margin-top: 0;
+	}
+}
+// === end Wide screen breakpoint ===
